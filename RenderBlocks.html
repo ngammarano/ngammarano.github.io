@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <title>Blocks Embedding Test Page</title>
+    <style>
+        html {font-family: Arial, Helvetica, sans-serif}
+        .boxdiv {padding:5px; display:inline-block; border: solid; background-color: lightgray}
+    </style>
+</head>
+<body>
+    <h1>Blocks Embedding Test Page</h1>
+    <h2>Try embedding some blocks...</h2>
+    <pre id="pre1">
+        basic.showString("it works!");
+    </pre>
+    <h2>Try embedding some more blocks...</h2>
+    <pre id="pre2">
+        basic.forever(() => {
+            led.plot(2, 2)
+        });
+    </pre>
+    <h2>Try embedding blocks from project...</h2>
+    <pre id="pre3" pub="_HjWJo9eHjXwP"></pre>
+    <script src="renderscript.js"></script>
+</body>
+</html>
