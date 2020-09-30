@@ -21,3 +21,7 @@ turtle.forward(1)
 <script>
     makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");
 </script>
+
+```package
+microturtle=github:Microsoft/pxt-microturtle#v0.0.9
+```
