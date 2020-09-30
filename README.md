@@ -10,6 +10,11 @@
 </pre>
 <pre id="pre3" data-packageid="_HjWJo9eHjXwP"></pre>
 
+The turtle starts in the center of the screen heading upward. Place a ``||turtle:forward||`` block to make it move up.
+
+```blocks
+turtle.forward(1)
+```
 
 <script src="https://makecode.com/gh-pages-embed.js">
 </script>
