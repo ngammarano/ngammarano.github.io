@@ -12,11 +12,17 @@
     <button onclick="clearScreen()">Clear</button>
     <button onclick="renderSnippets()">Render projects</button>
     <h3>Using JavaScript code</h3>
-    <textarea id="makecodeCode" rows="15" cols="75"></textarea>
+    <textarea id="makecodeCode" rows="15" cols="75">
+basic.showString("Hello World!");
+basic.forever(() => {
+  led.toggle(0,0);
+  basic.pause(100);
+}
+    </textarea>
     <button onclick="addCode()">Add</button>
     <br>
     <h3>Using a MakeCode project ID</h3>
-    <input type="text" id="makecodeProject">
+    <input type="text" id="makecodeProject" value="_HjWJo9eHjXwP">
     <button onclick="addProject()">Add</button>
     <br>
     <!-- <pre id="pre1" pub="_HjWJo9eHjXwP"></pre> -->
