@@ -103,4 +103,25 @@ function renderSnippets() {
 }
 
 // load the renderer
-renderSnippets();
+//renderSnippets();
+
+
+
+let preNumber = 0;
+
+function clearScreen() {
+    document.getElementById("mainBlocks").innerHTML = "";
+    preNumber = 0;
+}
+
+function addCode() {
+    document.getElementById("mainBlocks").innerHTML += "<h2>Project " + preNumber.toString() + "</h2>";
+    document.getElementById("mainBlocks").innerHTML += "<pre id='pre" + preNumber.toString() + "'>" + document.getElementById("makecodeCode").value + "</pre>";
+    preNumber++;
+}
+
+function addProject() {
+    document.getElementById("mainBlocks").innerHTML += "<h2>Project " + preNumber.toString() + "</h2>";
+    document.getElementById("mainBlocks").innerHTML += "<pre id='pre" + preNumber.toString() + "' pub='" + document.getElementById("makecodeProject").value + "'></pre>";
+    preNumber++;
+}

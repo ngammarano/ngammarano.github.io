@@ -1,25 +1,28 @@
 <html lang="en">
 <head>
-    <title>Blocks Embedding Test Page</title>
+    <title>MakeCode Blocks Rendering</title>
     <style>
         html {font-family: Arial, Helvetica, sans-serif}
         .boxdiv {padding:5px; display:inline-block; border: solid; background-color: lightgray}
     </style>
 </head>
 <body>
-    <h1>Blocks Embedding Test Page</h1>
-    <h2>Try embedding some blocks...</h2>
-    <pre id="pre1">
-        basic.showString("it works!");
-    </pre>
-    <h2>Try embedding some more blocks...</h2>
-    <pre id="pre2">
-        basic.forever(() => {
-            led.plot(2, 2)
-        });
-    </pre>
-    <h2>Try embedding blocks from project...</h2>
-    <pre id="pre3" pub="_HjWJo9eHjXwP"></pre>
+    <h1>MakeCode Blocks Rendering</h1>
+    <h2>Add a MakeCode project</h2>
+    <button onclick="clearScreen()">Clear</button>
+    <button onclick="renderSnippets()">Render projects</button>
+    <h3>Using JavaScript code</h3>
+    <textarea id="makecodeCode" rows="15" cols="75"></textarea>
+    <button onclick="addCode()">Add</button>
+    <br>
+    <h3>Using a MakeCode project ID</h3>
+    <input type="text" id="makecodeProject">
+    <button onclick="addProject()">Add</button>
+    <br>
+    <!-- <pre id="pre1" pub="_HjWJo9eHjXwP"></pre> -->
+    <!-- <pre id="pre2" pub="_6fT9haLmrFkC"></pre> -->
+    <!-- <pre id="pre3" pub="_XXD3iuF36HCF"></pre> -->
+    <p id="mainBlocks"></p>
     <script src="RenderBlocks.js"></script>
 </body>
 </html>
