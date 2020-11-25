@@ -87,6 +87,11 @@ var makeCodeRenderPre = makeCodeRenderPre || (function () {
                 var code = document.getElementById(id);
                 code.parentElement.insertBefore(img, code)
                 code.parentElement.removeChild(code);
+                // @ngammarano
+                numberOfPres--;
+                if (numberOfPres == 0) {
+                    document.getElementById("body").style = "background-color: #D0FFD0";
+                };
                 break;
         }
     }, false);
@@ -94,13 +99,21 @@ var makeCodeRenderPre = makeCodeRenderPre || (function () {
     return renderPre;
 })();
 
+let numberOfPres = 0;
+
 function renderSnippets() {
     // TODO ADD RENDER LOGIC HERE
     let pres = document.getElementsByTagName("pre");
+    numberOfPres = pres.length;
+    if (numberOfPres != 0) {
+        document.getElementById("body").style = "background-color: #FFFFD0";
+    };
     Array.prototype.forEach.call(pres, function (pre) {
         makeCodeRenderPre(pre);
-    })
+    });
 }
+
+
 
 // load the renderer
 //renderSnippets();
